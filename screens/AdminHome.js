@@ -25,7 +25,8 @@ const AdminHome = () => {
   }, []);
 
   const handleSelectWorkshop = (workshop) => {
-    // setSelectedEvent(workshop);
+    setSelectedEvent(workshop);
+
     console.log(workshop.ID);
   };
 
