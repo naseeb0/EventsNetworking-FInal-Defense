@@ -25,10 +25,11 @@ const AdminHome = () => {
   }, []);
 
   const handleSelectWorkshop = (workshop) => {
-    setSelectedEvent(workshop);
-    navigation.navigate('RecommendationScreen', { workshop });
+    // setSelectedEvent(workshop);
+    console.log(workshop.ID);
   };
 
+  
   const getRandomWorkshops = async () => {
     try {
       const events = await fetchEvents();
@@ -127,7 +128,8 @@ const AdminHome = () => {
       {randomWorkshops.map((workshop, index) => (
         <TouchableOpacity
           key={index}
-          onPress={() => handleSelectWorkshop(workshop.Workshop)}
+          // Previously yesma workshop.Workshop thiyo
+          onPress={() => handleSelectWorkshop(workshop)}
         >
           <Card style={cardStyle}>
             <Card.Content style={{ flexDirection: 'row', alignItems: 'center' }}>
